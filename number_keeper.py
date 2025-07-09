@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
+
 class NumberKeeper:
-    def __init__(self, initial_number:int =None):
+    def __init__(self, initial_number: int = None):
         "Optionally, sets kept number on creation."
         self.number = initial_number
 
@@ -15,6 +16,7 @@ class NumberKeeper:
 
     def __str__(self) -> str:
         return f"Kept Value: {repr(self.number)}"
+
 
 if __name__ == "__main__":
     z = NumberKeeper()

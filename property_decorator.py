@@ -2,11 +2,13 @@
 
 import unittest
 
+
 class Animal:
     def __init__(self, name, species, weight):
         self.name = name
         self.species = species
         self.weight = weight
+
 
 class TestAnimal(unittest.TestCase):
     def example(self):
@@ -26,6 +28,7 @@ class TestAnimal(unittest.TestCase):
         oscar = self.example()
         oscar.weight = 10
         self.assertEqual(oscar.weight, 10)
+
 
 if __name__ == "__main__":
     unittest.main()

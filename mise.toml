@@ -1,0 +1,19 @@
+[tools]
+python = "{{ get_env(name='PYTHON_VERSION', default='3.13') }}"
+uv = "latest"
+
+[env]
+PROJECT_NAME = "{{ config_root | basename }}"
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+description = "Install dependencies"
+alias = "i"
+run = "uv pip install -r requirements.txt"
+
+[tasks.test]
+description = "Run tests"
+alias = "t"
+run = "pytest -v --tb=short ./java2python.py"
+
+# EOF
